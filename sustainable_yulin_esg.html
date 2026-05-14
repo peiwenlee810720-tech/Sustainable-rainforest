@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4 landscape;
+            margin: 0;
+            background-color: #064e3b;
+        }
+        * { box-sizing: border-box; -webkit-print-color-adjust: exact; }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'PingFang TC', 'Heiti TC', 'Microsoft JhengHei', sans-serif;
+            color: #1e293b;
+        }
+        .slide {
+            width: 297mm;
+            height: 210mm;
+            position: relative;
+            overflow: hidden;
+            background-color: #ffffff;
+            page-break-after: always;
+        }
+        /* Title Slide Style */
+        .title-slide {
+            background: linear-gradient(135deg, #064e3b 0%, #0d9488 100%);
+            color: white;
+            display: block;
+            padding: 60mm 20mm;
+            text-align: center;
+        }
+        .title-slide h1 {
+            font-size: 48pt;
+            margin-bottom: 10mm;
+            line-height: 1.2;
+        }
+        .title-slide h2 {
+            font-size: 24pt;
+            font-weight: normal;
+            color: #22d3ee;
+            letter-spacing: 2px;
+        }
+        /* Content Slide Layout */
+        .header {
+            background-color: #064e3b;
+            color: white;
+            padding: 10mm 15mm;
+            width: 100%;
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 22pt;
+            border-left: 5px solid #22d3ee;
+            padding-left: 10mm;
+        }
+        .content {
+            padding: 15mm 20mm;
+            height: 160mm;
+        }
+        /* Grid System replacement for WeasyPrint */
+        .row { display: table; width: 100%; table-layout: fixed; border-spacing: 15px; }
+        .col { display: table-cell; vertical-align: top; }
+
+        .card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 15px;
+            border-top: 4px solid #0d9488;
+            margin-bottom: 10px;
+        }
+        .card h3 { color: #064e3b; margin-top: 0; font-size: 16pt; }
+        .card p { font-size: 12pt; color: #475569; }
+
+        .highlight-box {
+            background-color: #f0fdf4;
+            border-left: 6px solid #0d9488;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th {
+            background-color: #064e3b;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        tr:nth-child(even) { background-color: #f1f5f9; }
+        .check { color: #059669; font-weight: bold; }
+
+        .footer {
+            position: absolute;
+            bottom: 5mm;
+            left: 15mm;
+            right: 15mm;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 3mm;
+            font-size: 9pt;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Slide 1: Cover -->
+    <div class="slide title-slide">
+        <h2>Sustainable Yulin | 永續羽林</h2>
+        <h1>黑水虻生物技術：<br>ESG 循環經濟與數據賦能解決方案</h1>
+        <p style="font-size: 18pt; margin-top: 20mm; opacity: 0.8;">重塑廢棄物價值，羽化綠色未來</p>
+    </div>
+
+    <!-- Slide 2: Challenges -->
+    <div class="slide">
+        <div class="header"><h2>企業面臨的環境挑戰</h2></div>
+        <div class="content">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <h3>財務成本壓力</h3>
+                        <p>傳統廢棄物清運費用隨政策與處理能量波動，企業難以預測長期預算。</p>
+                    </div>
+                    <div class="card">
+                        <h3>ESG 合規瓶頸</h3>
+                        <p>現有清運模式僅有重量數據，缺乏碳足跡減項與資源循環實質證明。</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <h3>傳統處理弊端</h3>
+                        <p>焚化處置產生大量碳排；堆肥處理佔地廣、時間長（3-6個月）且易生異味。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">永續羽林 - 商業計劃書 2024</div>
+    </div>
+
+    <!-- Slide 3: Solution -->
+    <div class="slide">
+        <div class="header"><h2>核心解決方案：黑水虻生物引擎</h2></div>
+        <div class="content">
+            <div class="row">
+                <div class="col">
+                    <div class="highlight-box">
+                        <p style="font-size: 14pt;"><strong>14天 極速轉化週期</strong></p>
+                        <p>透過專利自動化養殖系統，將有機廢棄物在14天內轉化為高價值生物產物。</p>
+                    </div>
+                    <ul style="font-size: 13pt; line-height: 1.8;">
+                        <li><strong>零廢棄：</strong> 100% 資源化，無二次污染。</li>
+                        <li><strong>數位追蹤：</strong> IoT 全程監控處置數據。</li>
+                        <li><strong>碳資產：</strong> 顯著降低範疇三廢棄物排放。</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="card" style="border-top-color: #22d3ee;">
+                        <h3>產出價值轉化</h3>
+                        <p>1. <strong>蟲體蛋白：</strong> 優質動植物飼料來源。</p>
+                        <p>2. <strong>有機蟲糞肥：</strong> 天然土壤改良劑。</p>
+                        <p>3. <strong>ESG 數據：</strong> 生成可驗證的永續報告。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">永續羽林 - 商業計劃書 2024</div>
+    </div>
+
+    <!-- Slide 4: Comparison -->
+    <div class="slide">
+        <div class="header"><h2>處置方案競爭優勢分析</h2></div>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>評估指標</th>
+                        <th>傳統焚化</th>
+                        <th>傳統堆肥</th>
+                        <th style="background-color: #0d9488;">永續羽林技術</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>處理時間</td>
+                        <td>即時</td>
+                        <td>90-180 天</td>
+                        <td><span class="check">14 天</span></td>
+                    </tr>
+                    <tr>
+                        <td>環境影響</td>
+                        <td>高碳排 / 毒素</td>
+                        <td>甲烷排放 / 異味</td>
+                        <td><span class="check">低耗能 / 零污染</span></td>
+                    </tr>
+                    <tr>
+                        <td>資源回饋</td>
+                        <td>無</td>
+                        <td>低價值肥料</td>
+                        <td><span class="check">高蛋白 / 高碳匯</span></td>
+                    </tr>
+                    <tr>
+                        <td>數據揭露</td>
+                        <td>基本重量</td>
+                        <td>難以量化</td>
+                        <td><span class="check">數位化 ESG 追蹤</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="footer">永續羽林 - 商業計劃書 2024</div>
+    </div>
+
+    <!-- Slide 5: Contact -->
+    <div class="slide" style="background-color: #f8fafc;">
+        <div class="content" style="text-align: center; padding-top: 50mm;">
+            <h1 style="color: #064e3b; font-size: 36pt;">攜手永續羽林，成就企業綠色轉型</h1>
+            <p style="font-size: 18pt; color: #64748b; margin-top: 10mm;">We turn waste into worth.</p>
+            <div style="margin-top: 20mm; display: inline-block; text-align: left; padding: 20px; border: 1px solid #cbd5e1; border-radius: 12px;">
+                <p><strong>聯絡資訊</strong></p>
+                <p>官方網站：www.sustainableyulin.com</p>
+                <p>電子信箱：service@sustainableyulin.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
